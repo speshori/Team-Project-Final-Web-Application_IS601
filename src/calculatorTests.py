@@ -18,5 +18,8 @@ class MyTestCase(unittest.TestCase):
     def test_division(self):
         self.assertEqual(self.calc.divide(10, 2), 5)
 
+    def test_square(self):
+        self.assertEqual(self.calc.square(4), 16)
+
 if __name__ == '__main__':
     unittest.main()

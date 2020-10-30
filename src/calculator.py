@@ -10,6 +10,9 @@ def division(x1, x2):
 def squareNumber(x1):
     return x1 * x1
 
+def squareRoot(x1):
+    return x1**(1/2.0)
+
 
 class calculator:
 
@@ -33,5 +36,9 @@ class calculator:
 
     def square(self, x1):
         self.result = squareNumber(x1)
+        return self.result
+
+    def squareroot(self, x1):
+        self.result = squareRoot(x1)
         return self.result
 

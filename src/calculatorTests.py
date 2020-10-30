@@ -15,5 +15,8 @@ class MyTestCase(unittest.TestCase):
     def test_subtraction(self):
         self.assertEqual(self.calc.subtract(5, 2), 3)
 
+    def test_division(self):
+        self.assertEqual(self.calc.divide(10, 2), 5)
+
 if __name__ == '__main__':
     unittest.main()

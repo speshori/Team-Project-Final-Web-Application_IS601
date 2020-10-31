@@ -16,7 +16,6 @@ def squareNumber(x1):
 def squareRoot(x1):
     return x1**(1/2.0)
 
-
 class calculator:
 
     result = 0
@@ -39,6 +38,7 @@ class calculator:
 
     def divide(self, x1, x2):
         self.result = division(x1, x2)
+        self.result = float("{:.3f}".format(self.result))
         return self.result
 
     def square(self, x1):
@@ -47,5 +47,6 @@ class calculator:
 
     def squareroot(self, x1):
         self.result = squareRoot(x1)
+        self.result = float("{:.3f}".format(self.result))
         return self.result
 

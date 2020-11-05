@@ -1,11 +1,13 @@
 from calculator import calculator
 import random
+import collections
 
 class stats_calculator:
 
     def __init__(self):
         pass
 
+    # RANDOM FUNCTIONS
     # 1. Generate a random number without a seed between a range of two numbers - Both Integer and Decimal
     def random_num_int_generator(self):
 
@@ -72,7 +74,66 @@ class stats_calculator:
             select_list_seed.append(lst[j])
         return select_list_seed
 
-'''
-lst = [0, 1, 2, 3, 4, 5, 6]
-print(stats_calculator().random_seed_item_generator(lst))
-'''
+    # DESCRIPTIVE STATISTICS FUNCTIONS
+
+    # mean
+    def mean(self, lst):
+        sum = 0
+        for i in lst:
+            sum = calculator().add(sum, i)
+        mean_value = sum/len(lst)
+        return mean_value
+
+    # median
+    def median(self, lst):
+        middle = int(len(lst)/2)
+        if len(lst) % 2 == 0:
+            other_num = calculator().subtract(middle, 1)
+            return (calculator().add(lst[middle], lst[other_num])/2)
+        else:
+            return lst[middle]
+
+    # mode
+    def mode(self, lst):
+        data = collections.Counter(lst)
+        data_list = dict(data)
+        max_value = max(list(data.values()))
+        mode_val = [num for num, freq in data_list.items() if freq == max_value]
+        if len(mode_val) == len(lst):
+            return None
+        else:
+            return int(mode_val[0])
+    # variance
+    def variance(self, lst):
+        sum = 0
+        for i in lst:
+            sum = calculator().add(sum, i)
+        sq = calculator().square(sum)
+        div = calculator().divide(sq, len(lst)) #20,533.5
+        sqsum = 0
+        for j in lst:
+            tempsq = calculator().square(j)
+            sqsum = sqsum + tempsq #51,633
+        sub = sqsum - div #31,099.5
+        newnum = calculator().subtract(len(lst), 1)
+        variance_result = calculator().divide(sub, newnum)
+        return variance_result
+
+    # standard deviation
+    def standard_deviation(self, lst):
+        var = stats_calculator().variance(lst)
+        sd = calculator().squareroot(var)
+        return sd
+
+    # z-score
+    def z_score(self, x, lst):
+        mean = stats_calculator().mean(lst)
+        print(mean)
+        sd = stats_calculator().standard_deviation(lst)
+        print(sd)
+        diff = calculator().subtract(x, mean)
+        zscore = calculator().divide(diff, sd)
+        return zscore
+
+lst = [3, 9, 17, 21, 98, 203]
+print(stats_calculator().z_score(9, lst))

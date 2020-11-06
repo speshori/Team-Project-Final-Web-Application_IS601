@@ -10,7 +10,6 @@ class stats_calculator:
     # RANDOM FUNCTIONS
     # 1. Generate a random number without a seed between a range of two numbers - Both Integer and Decimal
     def random_num_int_generator(self):
-
         rand_num_int = random.randint(1, 10)
         return rand_num_int
 
@@ -100,7 +99,7 @@ class stats_calculator:
         max_value = max(list(data.values()))
         mode_val = [num for num, freq in data_list.items() if freq == max_value]
         if len(mode_val) == len(lst):
-            return None
+            return 0
         else:
             return int(mode_val[0])
     # variance
@@ -126,14 +125,17 @@ class stats_calculator:
         return sd
 
     # z-score
-    def z_score(self, x, lst):
+    def z_score(self, lst):
         mean = stats_calculator().mean(lst)
-        print(mean)
         sd = stats_calculator().standard_deviation(lst)
-        print(sd)
-        diff = calculator().subtract(x, mean)
-        zscore = calculator().divide(diff, sd)
-        return zscore
+        zlist = []
+        for i in lst:
+            diff = calculator().subtract(i, mean)
+            zscore = calculator().divide(diff, sd)
+            zlist.append(zscore)
+        return zlist
 
+'''
 lst = [3, 9, 17, 21, 98, 203]
 print(stats_calculator().z_score(9, lst))
+'''

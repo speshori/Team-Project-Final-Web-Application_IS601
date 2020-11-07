@@ -80,7 +80,7 @@ class stats_calculator:
         sum = 0
         for i in lst:
             sum = calculator().add(sum, i)
-        mean_value = sum/len(lst)
+        mean_value = calculator().divide(sum, len(lst))
         return mean_value
 
     # median

@@ -18,14 +18,14 @@
   
   ### Descriptive Statistics Functions (List used for examples: [0, 1, 2, 3, 3])
   #### mean -> return mean of a list by utilizing basic functions (add, divide) from calculator class
-  ##### Equation: sum of the terms/# of terms  Answer: 1.8
+  Equation: sum of the terms/# of terms  Answer: 1.8
   #### median -> return median of a list by utilizing basic functions (add, subtract) from calculator class
-  ##### Equation: n+1/2 (index)  Answer: 2
+  Equation: n+1/2 (index)  Answer: 2
   #### mode -> return mode of a list 
-  ##### Equation: most frequent number. Answer: 3
+  Equation: most frequent number. Answer: 3
   #### variance -> return variance of a list by utilizing basic functions (add, subtract, square, divide) from calculator class
-  ##### Equation: the sum of the difference of the value of one observation and the mean of all observations squared divided by number of observations minus one.  Answer: 1.7
+  Equation: the sum of the difference of the value of one observation and the mean of all observations squared divided by number of observations minus one.  Answer: 1.7
   #### standard deviation -> return standard deviation of a list by utilizing basic functions (squareroot) from calculator class and functions from the stats_calculator class (variance)
-  ##### Equation: squareroot of the variance.  Answer: 1.304
+  Equation: squareroot of the variance.  Answer: 1.304
   #### z-score -> return z-scores for each item of a list by utilizing basic functions (subtract, divide) from calculator class and functions from the stats_calculator class (standard deviation, mean)
-  ##### Equation: difference of the number and the mean of the set of numbers and that divided by the standard deviation of the set.  Answer: [-1.38, -0.613, 0.153, 0.92, 0.92]
+  Equation: difference of the number and the mean of the set of numbers and that divided by the standard deviation of the set.  Answer: [-1.38, -0.613, 0.153, 0.92, 0.92]

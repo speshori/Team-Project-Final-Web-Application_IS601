@@ -139,3 +139,4 @@ class stats_calculator:
 lst = [3, 9, 17, 21, 98, 203]
 print(stats_calculator().z_score(9, lst))
 '''
+

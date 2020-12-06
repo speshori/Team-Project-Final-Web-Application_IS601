@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="chart" width="400" height="400"></canvas>
+<script src='https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js'></script>
+<script>
+    async function getData(url) {
+        const response = await fetch(url);
+        return response.json();
+    }
+
+    const data = getData('/chart/dataset');
+    console.log(data);
+
+    async function getData(url) {
+        try {
+            const response = await fetch(url)
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    async function renderData(url) {
+        const data = await getData(url);
+        let mean = data.mean;
+        let median = data.median;
+        let mode = data.mode;
+        const ctx = document.getElementById('chart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['mean', 'median', 'mode'],
+                datasets: [{
+                    label: 'Mean, Median, and Mode',
+                    data: [mean, median, mode],
+                    backgroundColor: [
+                        'red',
+                        'green',
+                        'blue'
+                    ],
+                    borderColor: [
+                        'red',
+                        'green',
+                        'blue'
+                    ],
+                    borderWidth: 0.5
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    }
+
+    renderData('/chart/dataset');
+</script>
+
+
+</body>
+</html>

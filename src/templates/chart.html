@@ -3,20 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Graph Results</title>
 </head>
 <body>
 <canvas id="chart" width="400" height="400"></canvas>
 <script src='https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js'></script>
 <script>
-    async function getData(url) {
-        const response = await fetch(url);
-        return response.json();
-    }
-
-    const data = getData('/chart/dataset');
-    console.log(data);
-
     async function getData(url) {
         try {
             const response = await fetch(url)

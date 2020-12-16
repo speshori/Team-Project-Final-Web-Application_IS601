@@ -4,6 +4,7 @@
 By: Samir Peshori, Olanrewaju Oyebade
 
 # Features
+## Samir Peshori
 * The program creates an endpoint with the Statistics Calculator we had made previously with a JS script to display the charts for given values for mean, median, and mode.
 
 # Readme

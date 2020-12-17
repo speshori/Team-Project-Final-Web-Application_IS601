@@ -11,5 +11,9 @@ By: Samir Peshori, Olanrewaju Oyebade
 ### Olanrewaju Oyebade
 * This features Sends Emails from Python Flask Applications With Twilio SendGrid,  Flask route shows the integration of this functionality. 
 
+
+# Installation 
+* Fire up the Team-Project-Final-Web-Application_IS601 Event, this automatically kick starts docker, on docker window click on the weblink displayed to view the functionality of the features.
+
 # Readme
 

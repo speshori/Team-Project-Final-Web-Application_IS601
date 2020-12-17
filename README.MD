@@ -15,5 +15,4 @@ By: Samir Peshori, Olanrewaju Oyebade
 # Installation 
 * Fire up the Team-Project-Final-Web-Application_IS601 Event, this automatically kick starts docker, on docker window click on the weblink displayed to view the functionality of the features.
 
-# Readme
 

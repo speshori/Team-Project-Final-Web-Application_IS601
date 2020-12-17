@@ -5,10 +5,10 @@ By: Samir Peshori, Olanrewaju Oyebade
 
 # Features
 
-## Samir Peshori
+### Samir Peshori
 * The program creates an endpoint with the Statistics Calculator we had made previously with a JS script to display the charts for given values for mean, median, and mode.
 
-## Olanrewaju Oyebade
+### Olanrewaju Oyebade
 * This features Sends Emails from Python Flask Applications With Twilio SendGrid,  Flask route shows the integration of this functionality. 
 
 # Readme
